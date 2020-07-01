@@ -7,37 +7,36 @@ var numeriTotali
 var difficoltà = prompt("Scegli il livello di difficoltà da 0 a 2")
 switch (parseInt(difficoltà)) {
   case 0:
-    numeriTotali = 100
+    numeriTotali = 100;
     console.log("👶Livello facile👶");
     break;
   case 1:
-    numeriTotali = 80
+    numeriTotali = 80;
     console.log("🧐Livello intermedio🧐");
     break;
   case 2:
-    numeriTotali = 50
+    numeriTotali = 50;
     console.log("🤯Livello difficile🤯");
     break;
   default:
-  console.log("⛔⛔Input errato. Inserire un numero fra 0 a 2⛔⛔");
+  numeriTotali = 100;
+  console.log("⛔⛔Input errato. Livello facile impostato⛔⛔");
 }
 
 // Il computer deve generare 16 numeri casuali tra 1 e 100.
 // I numeri non possono essere duplicati
 var numeriMinati = [];
-var i = 0;
 while (numeriMinati.length < 16) {
   var numero = getRandomIntInclusive(1,numeriTotali);
   if (!numeriMinati.includes(numero)) {
       numeriMinati.push(numero)
   }
-i++
 }
 // console.log(numeriMinati);
 
 // In seguito deve chiedere all’utente (100 - 16) volte di inserire un numero alla volta, sempre compreso tra 1 e 100.
-var i = 0;
-var punteggio = 0
+
+var punteggio = 0;
 var minaTrovata = false;
 var listaNumeri = [];
 while (minaTrovata == false && listaNumeri.length < (numeriTotali - numeriMinati.length)) {
@@ -70,7 +69,7 @@ while (minaTrovata == false && listaNumeri.length < (numeriTotali - numeriMinati
         console.log("CONTINUA COSI");
       }
        punteggio = punteggio + 1;
-       i++
+
      }
 }
 
